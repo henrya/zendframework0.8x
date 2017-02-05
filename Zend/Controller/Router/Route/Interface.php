@@ -15,7 +15,7 @@
  * @package    Zend_Controller
  * @subpackage Router
  * @copyright  Copyright (c) 2005-2007 Zend Technologies USA Inc. (http://www.zend.com)
- * @version    $Id: Interface.php 2800 2007-01-16 01:36:23Z bkarwin $
+ * @version    $Id: Interface.php 977 2007-03-12 12:11:28Z priit $
  * @license    http://www.zend.com/license/framework/1_0.txt Zend Framework License version 1.0
  */
 

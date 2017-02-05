@@ -17,7 +17,7 @@
  * @subpackage Input
  * @copyright  Copyright (c) 2005-2007 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @version    $Id: Input.php 3278 2007-02-07 21:54:50Z darby $
+ * @version    $Id: Input.php 977 2007-03-12 12:11:28Z priit $
  */
 
 

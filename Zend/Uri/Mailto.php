@@ -33,7 +33,7 @@ require_once 'Zend/Uri.php';
  */
 class Zend_Uri_Mailto extends Zend_Uri {
 
-    protected function __construct($scheme, $schemeSpecific)
+    protected function __construct($scheme, $schemeSpecific = "")
     {}
 
     public function getUri()

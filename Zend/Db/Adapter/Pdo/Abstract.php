@@ -96,7 +96,8 @@ abstract class Zend_Db_Adapter_Pdo_Abstract extends Zend_Db_Adapter_Abstract
 
             // always use exceptions.
             $this->_connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
+			// Fix issues with unbuffered querys
+			$this->_connection->setAttribute(PDO::MYSQL_ATTR_USE_BUFFERED_QUERY, true);
             /** @todo Are there other portability attribs to consider? */
         } catch (PDOException $e) {
             throw new Zend_Db_Adapter_Exception($e->getMessage(), $e->getCode());

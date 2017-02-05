@@ -227,7 +227,7 @@ class Zend_Controller_Request_Http extends Zend_Controller_Request_Abstract
      * @param mixed $default Default value to use if key not found
      * @return mixed Returns null if key does not exist
      */
-    public function getQuery($key = null, $default = null) 
+    public static function getQuery($key = null, $default = null) 
     { 
         if (null === $key) {
             return $_GET;

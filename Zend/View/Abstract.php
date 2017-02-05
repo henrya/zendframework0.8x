@@ -707,9 +707,8 @@ abstract class Zend_View_Abstract implements Zend_View_Interface
         foreach ($this->_path[$type] as $info) {
             $dir    = $info['dir'];
             $prefix = $info['prefix'];
-
             $class = $prefix . ucfirst($name);
-            
+
             if (class_exists($class, false)) {
                 $this->$classAccess($name, $class);
                 return $class;

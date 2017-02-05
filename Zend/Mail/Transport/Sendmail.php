@@ -110,6 +110,8 @@ class Zend_Mail_Transport_Sendmail extends Zend_Mail_Transport_Abstract
             $this->recipients = implode(',', $headers['To']);
         }
 
+		unset($headers['To']);
+
         // Remove subject header, if present
         if (isset($headers['Subject'])) {
             unset($headers['Subject']);
@@ -117,6 +119,7 @@ class Zend_Mail_Transport_Sendmail extends Zend_Mail_Transport_Abstract
 
         // Prepare headers
         parent::_prepareHeaders($headers);
+		$this->header = rtrim($this->header);
     }
 }
 

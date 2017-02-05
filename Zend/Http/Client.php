@@ -16,7 +16,7 @@
  * @category   Zend
  * @package    Zend_Http
  * @subpackage Client
- * @version    $Id: Client.php 3547 2007-02-21 18:11:55Z bkarwin $
+ * @version    $Id: Client.php 998 2007-03-21 21:27:09Z priit $
  * @copyright  Copyright (c) 2005-2007 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  */
@@ -723,7 +723,6 @@ class Zend_Http_Client
             
             $body = $this->prepare_body();
             $headers = $this->prepare_headers();
-            
             // Open the connection, send the request and read the response
             $this->adapter->connect($uri->getHost(), $uri->getPort(), 
                 ($uri->getScheme() == 'https' ? true : false));
@@ -732,6 +731,7 @@ class Zend_Http_Client
                 $uri, $this->config['httpversion'], $headers, $body);
                 
             $response = $this->adapter->read();
+            
             if (! $response)
                 throw new Zend_Http_Client_Exception('Unable to read response, or response is empty');
                 
